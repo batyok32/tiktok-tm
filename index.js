@@ -55,6 +55,14 @@ app.get("/videos", async (req, res) => {
     }
 });
 
+app.get("", async (req, res) => {
+    try {
+        res.status(200).send("Hello World");
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 // Listener
 app.listen(8001, () => {
     console.log("Server has started on port 8001");
